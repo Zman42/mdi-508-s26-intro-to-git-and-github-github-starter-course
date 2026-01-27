@@ -36,6 +36,7 @@ jobs:
         expected-output: Hello, Alice!
         comparison-method: exact
         timeout: 10
+        max-score: 1
     - name: 'Task 3: Even or odd (debug)'
       id: task-3-even-or-odd-debug
       uses: classroom-resources/autograding-io-grader@v1
@@ -71,6 +72,7 @@ jobs:
         expected-output: '10'
         comparison-method: exact
         timeout: 10
+        max-score: 1
     - name: 'Task 5: CSV shape (debug)'
       id: task-5-csv-shape-debug
       uses: classroom-resources/autograding-io-grader@v1
@@ -82,6 +84,7 @@ jobs:
         expected-output: 4 3
         comparison-method: exact
         timeout: 10
+        max-score: 1
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
