@@ -357,8 +357,8 @@ odd
 Implement a Python script named `sum_csv.py` that reads a filename from the command line, reads a CSV file containing a
 single line of comma-separated numbers, and prints the sum of the numbers.
 
-You should create a CSV file named `prob4_data.csv` in your repository to test your code. This file should contain a
-single line of comma-separated values, for example:
+You to debug your code, you should create a CSV file named `prob4-data-debug.csv` in your repository to test your code.
+This file should contain a single line of comma-separated values, for example:
 
 ```
 1,2,3,4
@@ -367,12 +367,12 @@ single line of comma-separated values, for example:
 Example usage:
 
 ```bash
-python sum_csv.py prob4_data.csv
+python sum_csv.py prob4-data-debug.csv
 # output:
 10
 ```
 
-Note: You must commit and push `prob4_data.csv` along with your solution so that the autograder can access it.
+You do no not need to include the csv file in your repository.
 
 Helpful Numpy functions:
 
@@ -391,8 +391,8 @@ Example output format:
 3 5
 ```
 
-You should create a CSV file named `prob5_data.csv` in your repository to test your code. This file can contain any
-rectangular table of values. For example, the following file has 3 rows and 4 columns:
+You should create a CSV file named `prob5-data-debug.csv` in your repository to test your code. This file can contain
+any rectangular table of values. For example, the following file has 3 rows and 4 columns:
 
 `prob5_data.csv`
 
@@ -405,14 +405,11 @@ rectangular table of values. For example, the following file has 3 rows and 4 co
 Example usage:
 
 ```bash
-python csv_shape.py prob5_data.csv
+python csv_shape.py prob5-data-debug.csv
 # output:
 3 4
 ```
 
-Note: You must commit and push `prob5_data.csv` along with your solution so that the autograder can access it.
-
-Helpful Numpy functions:
 
 - `ndarray.shape` (rows, columns): <https://numpy.org/doc/stable/reference/generated/numpy.ndarray.shape.html>
 
