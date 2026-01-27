@@ -1,108 +1,551 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/0maOzv5q)
-# :wave: The Basics of GitHub 
+# MDI-508-S26 Homework 0: Introduction to Git, GitHub, and GitHub Classroom
 
-## 🤓 Course overview and learning outcomes 
+**Due: February 5, 2026. 11:59 pm**
 
-The goal of this course is to give you a brief introduction to GitHub. We’ll also provide you with materials for further learning and a few ideas to get you started on our platform. 🚀
+This assignment is designed to introduce you to the basic workflow for using Git, GitHub, and Github Classroom, which we
+will use throughout the course for submitting homework assignments.  By the end of this homework, you will have:
 
-## :octocat: Git and GitHub
+- Created or verified a GitHub account
+- Joined the course GitHub Classroom
+- Cloned a repository to your local machine
+- Edited a file locally
+- Committed and pushed your changes to GitHub
+- Viewed automated feedback from GitHub Classroom
 
-Git is a **distributed Version Control System (VCS)**, which means it is a useful tool for easily tracking changes to your code, collaborating, and sharing. With Git you can track the changes you make to your project so you always have a record of what you’ve worked on and can easily revert back to an older version if need be. It also makes working with others easier—groups of people can work together on the same project and merge their changes into one final source!
+## 1. What are Git, GitHub, and GitHub Classroom?
 
-GitHub is a way to use the same power of Git all online with an easy-to-use interface. It’s used across the software world and beyond to collaborate and maintain the history of projects.
+Git is a version control system used primarily for code. It tracks changes to files over time and allows you to:
 
-GitHub is home to some of the most advanced technologies in the world. Whether you're visualizing data or building a new game, there's a whole community and set of tools on GitHub that can get you to the next step. This course starts with the basics of GitHub, but we'll dig into the rest later.
+- Keep a complete history of your work
+- Revert to earlier versions if needed
+- Collaborate with others in a structured way
 
-## :octocat: Understanding the GitHub flow 
+GitHub is an online platform that hosts Git repositories.  A **repository** (often shortened to *repo*) is a collection
+of files together with their full change history tracked by Git. In this course, each homework assignment lives in its
+own repository, which exists both locally on your computer (when you clone it) and remotely on GitHub, where it is
+stored, shared, and automatically graded.
 
-The GitHub flow is a lightweight workflow that allows you to experiment and collaborate on your projects easily, without the risk of losing your previous work.
+GitHub also provides provides tools for writing code, collaboration, review, and automation.
 
-### Repositories
+In this course:
 
-A repository is where your project work happens--think of it as your project folder. It contains all of your project’s files and revision history.  You can work within a repository alone or invite others to collaborate with you on those files.
+- Each homework assignment will be a GitHub repository;
+- Submitting homework means "pushing commits" to GitHub -- think of this like saving your code to online into Github.
+- Many of the problems in an assignment will be automatically graded using GitHub Classroom.
 
-### Cloning 
+For a more detailed introduction to submitting assignments using GitHub Classroom, you should consult the following
+tutorials:
 
-When a repository is created with GitHub, it’s stored remotely in the ☁️. You can clone a repository to create a local copy on your computer and then use Git to sync the two. This makes it easier to fix issues, add or remove files, and push larger commits. You can also use the editing tool of your choice as opposed to the GitHub UI. Cloning a repository also pulls down all the repository data that GitHub has at that point in time, including all versions of every file and folder for the project! This can be helpful if you experiment with your project and then realize you liked a previous version more. 
-To learn more about cloning, read ["Cloning a Repository"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
+- GitHub Docs: Git and GitHub basics  
+  <https://docs.github.com/en/get-started/start-your-journey/about-github-and-git>
 
-### Committing and pushing
-**Committing** and **pushing** are how you can add the changes you made on your local machine to the remote repository in GitHub. That way your instructor and/or teammates can see your latest work when you’re ready to share it. You can make a commit when you have made changes to your project that you want to “checkpoint.” You can also add a helpful **commit message** to remind yourself or your teammates what work you did (e.g. “Added a README with information about our project”).
+- GitHub Hello World tutorial (browser-based, no installation required)  
+  <https://docs.github.com/en/get-started/start-your-journey/hello-world>
 
-Once you have a commit or multiple commits that you’re ready to add to your repository, you can use the push command to add those changes to your remote repository. Committing and pushing may feel new at first, but we promise you’ll get used to it 🙂
+> Note: The GitHub Hello World tutorial above introduces a general GitHub workflow that includes many steps such as
+> creating new repositories, creating branches, opening pull requests, and merging changes. For the purposes of this
+> course, however, you do **not** need to know how to do these steps. GitHub Classroom automatically creates the
+> repository for you, and submission is done by committing and pushing directly to the main branch.
 
-## 💻 GitHub terms to know 
+## 2. Join GitHub and accept the assignment
 
-### Repositories 
-We mentioned repositories already, they are where your project work happens, but let’s talk a bit more about the details of them! As you work more on GitHub you will have many repositories which may feel confusing at first. Fortunately, your ["GitHub dashboard"](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/about-your-personal-dashboard) helps to easily navigate to your repositories and see useful information about them. Make sure you’re logged in to see it!
+To get started, you need a GitHub account. If you already have a GitHub account you wish to use for this course, you may
+skip this step. Otherwise, go to <https://www.github.com> to create a new account.
 
-Repositories also contain **README**s. You can add a README file to your repository to tell other people why your project is useful, what they can do with your project, and how they can use it. We are using this README to communicate how to learn Git and GitHub with you. 😄 
-To learn more about repositories read ["Creating, Cloning, and Archiving Repositories](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories) and ["About README's"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes). 
+Remain logged into GitHub in your browser for the rest of this assignment. Once logged in, you can click on the
+following GitHub Classroom Homework 0 assignment link:
 
-### Branches
-You can use branches on GitHub to isolate work that you do not want merged into your final project just yet. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. Typically, you might create a new branch from the default branch of your repository—main. This makes a new working copy of your repository for you to experiment with. Once your new changes have been reviewed by a teammate, or you are satisfied with them, you can merge your changes into the default branch of your repository.
-To learn more about branching, read ["About Branches"](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-branches).
+   <https://classroom.github.com/a/0maOzv5Aq>
 
-### Forks
-A fork is another way to copy a repository, but is usually used when you want to contribute to someone else’s project. Forking a repository allows you to freely experiment with changes without affecting the original project and is very popular when contributing to open source software projects!
-To learn more about forking, read ["Fork a repo"](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo)
+(*Note that, for future assignments, the GitHub Classroom assignment link will be posted on the course website.*)
 
-### Pull requests
-When working with branches, you can use a pull request to tell others about the changes you want to make and ask for their feedback. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add more changes if need be. You can add specific people as reviewers of your pull request which shows you want their feedback on your changes! Once a pull request is ready-to-go, it can be merged into your main branch.
-To learn more about pull requests, read ["About Pull Requests"](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). 
+When prompted, authorize GitHub Classroom to access your GitHub account, then select your UB ID from the course roster
+if asked. Then accept the assignment.  After accepting, GitHub Classroom will create your own private repository for
+this homework, and you will be provided a link to this repository. Click on that link, and you will be taken to the
+repository's page on GitHub. This repository is your own homework assignment solution that you will edit and submit by
+"pushing" the edits to it.
 
+Specifically, you will edit a repository by editing files in that repository, or by creating new files. These edits
+can be done online directly in your browser using GitHub’s built-in editor or GitHub Codespaces, or you can do them
+offline on your own computer, and then push them back online into GitHub. Once edits are made, you must push them back
+onto GitHub. Pushing edits back onto GitHub saves a snapshot of your code on the cloud. When developing code (for this
+class or in general) you should push often to save your progress online. You will not be penalized by multiple pushes/
+submissions. Your grade will only be based on the last submission you push prior to the deadline.
 
-### Issues
-Issues are a way to track enhancements, tasks, or bugs for your work on GitHub. Issues are a great way to keep track of all the tasks you want to work on for your project and let others know what you plan to work on. You can also use issues to tell a favorite open source project about a bug you found or a feature you think would be great to add!
+## 3. Setting up your programming environment
 
-For larger projects, you can keep track of many issues on a project board. GitHub Projects help you organize and prioritize your work and you can read more about them [in this "About Project boards document](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards). You likely won’t need a project board for your assignments, but once you move on to even bigger projects, they’re a great way to organize your team’s work!
-You can also link together pull requests and issues to show that a fix is in progress and to automatically close the issue when someone merges the pull request.
-To learn more about issues and linking them to your pull requests, read ["About Issues"](https://docs.github.com/en/github/managing-your-work-on-github/about-issues). 
+To complete this homework, you will need a way to create and edit Python files in the repository, and submit changes to
+back GitHub. Up to this point, you may have only written Python code inside Jupyter notebooks. For this course, you will
+also work with plain Python files (`.py`). This requires a code editor or integrated development environment (IDE).
 
-### Your user profile
+There are three supported options for this course. Any one of them is acceptable.
 
-Your profile page tells people the story of your work through the repositories you're interested in, the contributions you've made, and the conversations you've had. You can also give the world a unique view into who you are with your profile README. You can use your profile to let future employers know all about you! 
-To learn more about your user profile and adding and updating your profile README, read ["Managing Your Profile README"](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme). 
+### Option A: Edit files directly on GitHub (simple browser editor)
 
-### Using markdown on GitHub 
+This option uses GitHub’s built-in file editor, accessed by clicking the pencil icon on a file on GitHub. It behaves
+like a very simple text editor and is best suited for small or straightforward changes.
 
-You might have noticed already, but you can add some fun styling to your issues, pull requests, and files. ["Markdown"](https://guides.github.com/features/mastering-markdown/) is an easy way to style your issues, pull requests, and files with some simple syntax. This can be helpful to organize your information and make it easier for others to read. You can also drop in gifs and images to help convey your point!
-To learn more about using GitHub’s flavor of markdown, read ["Basic Writing and Formatting Syntax"](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax). 
+1. Open your Homework 0 repository on GitHub in your browser.
+2. Click a file to edit, if it exists(for example, `hw0.py`), then click the pencil icon to edit.  If it doesn't exist,
+click the "Add file" button at the top to create the new file. Be sure to name it.
+3. Once you start to edit a file, or create a new one, you will be taken to the browser-based text editor.
+4. Make your changes to the file.
+5. Commit the changes using the green "Commit changes..." button.
 
-### Engaging with the GitHub community
+Committing the changes will trigger a push to Github and the GitHub autograder. Consult the following page for details
 
-The GitHub community is vast. There are many types of people who use GitHub in their day to day—students like you, professional developers, hobbyists working on open source projects, and explorers who are just jumping into the world of software development on their own. There are many ways you can interact with the larger GitHub community, but here are three places where you can start. 
+  <https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files>
 
-#### Starring repositories 
+### Option B: GitHub Codespaces (in-browser IDE)
 
-If you find a repository interesting or you want to keep track of it, star it! When you star a repository it’s also used as a signal to surface better recommendations on github.com/explore. If you’d like to get back to your starred repositories you can do so via your user profile. 
-To learn  more about starring repositories, read ["Saving Repositories with Stars"](https://docs.github.com/en/github/getting-started-with-github/saving-repositories-with-stars). 
+GitHub Codespaces provides a full-featured development environment that runs entirely in your browser. It looks and
+behaves very similarly to Visual Studio Code (see below), but requires no installation on your computer.
 
-#### Following users 
+With Codespaces, you get:
 
-You can follow people on GitHub to receive notifications about their activity and discover projects in their communities. When you follow a user, their public GitHub activity will show up on your dashboard so you can see all the cool things they are working on. 
-To learn more about following users, read ["Following People"](https://docs.github.com/en/github/getting-started-with-github/following-people).
+- A full code editor with syntax highlighting and file navigation
+- An integrated terminal
+- The ability to run and debug code and tests in the browser, prior to submitting your file to the autograder.
 
-#### Browsing GitHub Explore 
+To create a Codespace for your repository:
 
-GitHub Explore is a great place to do just that … explore :smile: You can find new projects, events, and developers to interact with.
+1. Open your Homework 0 repository on GitHub
+2. Click the green **Code** button
+3. Select the **Codespaces** tab
+4. Click **Create codespace on main**
 
-You can check out the GitHub Explore website [at github.com/explore](https://github.com/explore). The more you interact with GitHub the more tailored your Explore view will be. 
+This will take you to the browsdwer-based development environment. From you, you can create and edit files, run
+commands, and then commit and push your code. Note that **you must commit and push your code you develop inside
+Codespace** to save any of your results, so be sure to do this often if you plan to work in Codespaces.  Any commits you
+make inside Codespaces are committed and pushed to your GitHub Classroom repository and will trigger autograding.
 
-## 📝 Optional next steps 
+More information about the Codespaces environment can be found here:
 
-* Open a pull request and let your teacher know that you’ve finished this course.  
-* Create a new markdown file in this repository. Let them know what you learned and what you are still confused about! Experiment with different styles!
-* Create your profile README. Let the world know a little bit more about you! What are you interested in learning? What are you working on? What's your favorite hobby? Learn more about creating your profile README in the document, ["Managing Your Profile README"](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme).
-* Go to your user dashboard and create a new repository. Experiment with the features within that repository to familiarize yourself with them. 
-* [Let us know what you liked or didn’t like about the content of this course](https://support.github.com/contact/education). What would you like to see more of? What would be interesting or helpful to your learning journey? 
+- Quickstart guide: <https://docs.github.com/en/codespaces/quickstart>
+- More detailed information about developing in Codespace: <https://docs.github.com/en/codespaces/developing-in-a-codespace>
+- Specific information about how to commit and push your changes:
+<https://docs.github.com/en/codespaces/developing-in-a-codespace/using-source-control-in-your-codespace>
 
-## 📚  Resources 
-* [A short video explaining what GitHub is](https://www.youtube.com/watch?v=w3jLJU7DT5E&feature=youtu.be) 
-* [Git and GitHub learning resources](https://docs.github.com/en/github/getting-started-with-github/git-and-github-learning-resources) 
-* [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-* [How to use GitHub branches](https://www.youtube.com/watch?v=H5GJfcp3p4Q&feature=youtu.be)
-* [Interactive Git training materials](https://githubtraining.github.io/training-manual/#/01_getting_ready_for_class)
-* [GitHub's Learning Lab](https://lab.github.com/)
-* [Education community forum](https://education.github.community/)
-* [GitHub community forum](https://github.community/)
+### Option C: Use Visual Studio Code (VS Code) on your computer (local)
+
+Visual Studio Code (VS Code) is a free, widely used code editor that runs locally on your computer. You can download
+it here: <https://code.visualstudio.com>.
+
+VS Code looks and feels very much like Github Codespaces. This option gives you more control and is closer to
+professional development workflows, but it requires additional setup to make sure you have things correctly installed
+and cloned into your local computer.  Specifically, with this option, you must install and configure the following on
+your local computer:
+
+- Visual Studio Code (the code editor itself)
+- Git (the version control software that will manage the local copy of your repository, as well as manage pushing to and
+pulling / cloning from GitHub.
+- Git authentication with GitHub (using SSH keys) to enable communication between your computer and GitHub.
+
+Please refer to the following tutorials to perform these three tasks
+
+- Installing VS Code  
+  <https://code.visualstudio.com/docs/setup/setup-overview>
+
+- Using Git with VS Code  
+  <https://code.visualstudio.com/docs/sourcecontrol/overview>
+
+- Generating and adding SSH keys for GitHub  
+  <https://docs.github.com/en/authentication/connecting-to-github-with-ssh>
+
+Coding in VS Code is similar to coding on the GitHub Codespaces environment. Here is a tutorial to get you started:
+
+- Python in VS Code (editing and running `.py` files)  
+  <https://code.visualstudio.com/docs/python/python-tutorial>
+
+Once configured, you will use Git to move changes between your computer and GitHub. There are two equivalent ways to do
+this in VS Code (after you have set up your SSH keys on GitHub).
+
+#### Option C1: Using the command line
+
+- Clone your repository using `git clone`. This will download the repository onto your computer. In order to do this,
+you will need your repo's URL, which you can find if you click the green "Code" button on the repo's webpage, then
+copying the URL listed under the SSH tab. It should look something like:
+
+`git@github.com:MDI508-Coursework/mdi-508-s26-intro-to-git-and-github-github-starter-course-YOUR_USER_NAME.git`
+
+Once you have this, you can run the `git clone` command within your favorite terminal application (including the
+terminal application that is inside VS code).
+
+  ```bash
+  git clone git@github.com:MDI508-Coursework/mdi-508-s26-intro-to-git-and-github-github-starter-course.git
+  ```
+
+This will copy the repository into your current working directory. Open this repository folder in VS Code.
+
+- Make your edits to this repository.
+
+- Stage changes with `git add` -- staging is like a step before committing your edits. For example, if you added
+or edited a file `hw0.py`, you would save it then stage it using the command
+
+  ```bash
+  git add hw0.py
+  ```
+
+- Create commits with `git commit` -- committing is like finalizing the project "snapshot" that will be saved on your
+computer and GitHub.  When you commit, you need to include a short message to state what this snapshot contains
+
+  ```bash
+  git commit -m "Added solution to HW problem 3
+  ```
+
+- Upload your work to GitHub with `git push` -- pushing the updated repository moves the edits from your computer to
+GitHub.
+
+  ```bash
+  git push
+  ```
+
+Consult the following tutorial to learn more about the specific `git commands described above`:
+
+- <https://docs.github.com/en/get-started/git-basics>
+
+#### Option C2: Using VS Code’s built-in version control
+
+VS Code includes built-in support for Git in the version-control tab on the left-side of the editor. Using this,
+you can perform the above tasks entirely within VS Code.  Both approaches produce the same result: commits pushed to
+your GitHub Classroom repository.
+
+Refer to this tutorial for details: <https://code.visualstudio.com/docs/sourcecontrol/quickstart>
+
+## 4. Editing your files
+
+Regardless of your chosen environment, you will need to possibly clone your repository and then create, edit, commit and
+push files into your repository and on GitHub. The different environments have different ways of doing this and you
+should consult the apppropriate documentation we have linked to above to discuss how to do so. Here, we point out
+a few important extra details for writing up your homework solutions.
+
+### Reading inputs from the command line
+
+For this and other homework assignments, you will often have to write Python programs that are able to receive different
+inputs, and these inputs are passed in from the **command line**. Therefore, your solutions must be able to read these
+inputs from the command line and do the required processing as detailed in the homework. Specifically, when you submit
+your code to the autograder by pushing it onto Github, the autograder will test your solutions by running commands such
+as
+
+``` bash
+python hw0.py 7 30
+```
+
+Here, the inputs `7` and `30` are command line arugments, and could be replaced with other inputs during grading. Your
+program must be able to read these values and process them accordingly.  Below is a example code that would be placed
+inside its own Python file , the name of which must adhere to whatever is specified in the homework. The code contains
+the basic structure you need to read arguments from the command line, and then pass the values you read into whatever
+processing you are required to implement for your homework. You should follow this pattern for your solutions:
+
+>> Example Problem: Write a Python script named `calc_square.py` that takes in one integer value from the command line
+>> and prints the square of that number. It should be invoked as
+>>
+>> ```
+>> python calc_square.py 3
+>> 9
+>> ```
+
+Then you would create a new python file name `calc_square.py` and place the following code inside of it:
+
+```python
+# Inside calc_square.py
+import sys
+
+def square(x):
+  return x * x
+
+# This line reads one argument from the command line, and converts that into an integer
+n = int(sys.argv[1])
+
+# Call a function that performs the computation
+result = square(n)
+
+# Print the result
+print(result)
+```
+
+The line `import sys` gives access to command-line arguments. In particular, the variable `sys.argv` is a list of
+strings, with `sys.argv[0]` is the name of the script (`calc_square.py`) and `sys.argv[1]` is the first argument passed.
+on the command line. If we needed to read more arguments from command line, they would be located in `sys.argv[2]`,
+`sys.argv[3]`, etc.
+
+### Other files that may be graded
+
+Besides the results of the various Python scripts you write, you may also be asked to add files to the repository. Often
+these are plots produced by your code. If your code generates such plots, instead of printing some text, you will need
+to save these plots, and then commit and push the saved files into your repository and onto GitHub.
+
+Similarly, we may have some problems that will require you to submit a written solution, typically involving some hand
+word math problems. You can type up such solutions with whatever software you choose, or submit a carefully scanned
+copy of your hand-writte notes. These solutions must be legible in order to be graded. Like the plots, such files
+need to be committed and pushed into your repository.
+
+## 5. Receiving feedback from the autograder
+
+Every time you commit and push changes to your repository on GitHub, the GitHub Classroom autograder will run
+automatically. You do not need to submit anything separately. Pushing your code *is* the submission.
+
+To view feedback on your submission:
+
+1. Go to your Homework 0 repository on GitHub in your browser.
+2. Click the **Actions** tab near the top of the page.
+3. You will see a list of workflow runs. Click on the most recent one.
+4. The workflow will show whether the autograder passed or failed:
+   - A green checkmark indicates success.
+   - A red ❌ indicates that one or more tests failed.
+5. Click on the job name to view detailed output from the autograder.
+
+If a test fails, read the error message carefully. You can fix your code and push again as many times as you like before
+the deadline. Only the **last commit pushed before the deadline** will be graded.
+
+The visible autograder tests are provided to help you debug and verify your work. Your final grade may also depend on additional tests and inputs that are not disclosed.
+
+## 6. Programming problems for Homework 0 (5 points total)
+
+In this homework, you will complete a small set of basic Python programming tasks. Each task is worth **1 point**, for a
+total of **5 points**. These are intentionally simple and are meant to verify that you can edit code, commit it, push it
+to GitHub, and view automated feedback.  You are allowed to use **Numpy** for this assignment. Do not use other
+third-party Python libraries. Standard Python libraries such as `sys` are allowed.
+
+### Task 1 (1 point): Hello, world
+
+Implement a Python script named `hello_world.py` that accepts no command line arguments, and simply prints the
+string `Hello, world!`.
+
+Example usage:
+
+```bash
+python hello_world.py
+# output:
+Hello, world!
+```
+
+### Task 2 (1 point): Greeting with a name
+
+Implement a Python script named  `greeting.py` that reads a name (one string, no spaces) from the command line, and
+prints the string `Hello, $NAME!`, where `$NAME` is replaced with the name that is passed in from the command line.
+
+Example usage:
+
+```bash
+python greeting.py Alice
+# output:
+Hello, Alice!
+```
+
+### Task 3 (1 point): Even or odd
+
+Implement a Python script named `even_or_odd.py` that reads one integer from the command line and prints either
+`even` or `odd`.
+
+Example usage:
+
+```bash
+python even_or_odd.py 4
+# output:
+even
+```
+
+```bash
+python even_or_odd.py 7
+# output:
+odd
+```
+
+### Task 4 (1 point): Sum a list
+
+Implement a Python script named `sum_csv.py` that reads a filename from the command line, reads a CSV file containing a
+single line of comma-separated numbers, and prints the sum of the numbers.
+
+You should create a CSV file named `prob4_data.csv` in your repository to test your code. This file should contain a
+single line of comma-separated values, for example:
+
+```
+1,2,3,4
+```
+
+Example usage:
+
+```bash
+python sum_csv.py prob4_data.csv
+# output:
+10
+```
+
+Note: You must commit and push `prob4_data.csv` along with your solution so that the autograder can access it.
+
+Helpful Numpy functions:
+
+- `numpy.loadtxt` (read comma-separated values): <https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html>
+- `numpy.genfromtxt` (robust CSV reading): <https://numpy.org/doc/stable/reference/generated/numpy.genfromtxt.html>
+- `numpy.sum` (sum values): <https://numpy.org/doc/stable/reference/generated/numpy.sum.html>
+
+### Task 5 (1 point): CSV shape (rows and columns)
+
+Implement a Python script named `csv_shape.py` that reads a filename from the command line, reads the CSV file, and
+prints two integers: the number of rows and the number of columns, separated by a single space.
+
+Example output format:
+
+```
+3 5
+```
+
+You should create a CSV file named `prob5_data.csv` in your repository to test your code. This file can contain any
+rectangular table of values. For example, the following file has 3 rows and 4 columns:
+
+`prob5_data.csv`
+
+```
+1,2,3,4
+5,6,7,8
+9,10,11,12
+```
+
+Example usage:
+
+```bash
+python csv_shape.py prob5_data.csv
+# output:
+3 4
+```
+
+Note: You must commit and push `prob5_data.csv` along with your solution so that the autograder can access it.
+
+Helpful Numpy functions:
+
+- `ndarray.shape` (rows, columns): <https://numpy.org/doc/stable/reference/generated/numpy.ndarray.shape.html>
+
+Each task is graded independently. You may commit and push as many times as you like before the deadline. Only the final state of your repository will be graded.
+
+## 7. Stage, commit and push your changes
+
+Regardless of which editing environment you use, **your work is submitted by committing and pushing changes to GitHub**.
+You do not upload files separately and you do not email submissions.
+
+Below are instructions for staging, committing, and pushing your work for each of the three supported workflows.
+
+### Option A: GitHub browser editor (pencil icon)
+
+When you edit files directly on GitHub using the browser editor:
+
+1. Open a file in your repository and click the pencil icon.
+2. Make your edits in the browser.
+3. Scroll to the bottom of the page.
+4. Enter a short commit message describing your change.
+5. Click **Commit changes**.
+
+This automatically:
+
+- stages the changes,
+- creates a commit,
+- and pushes it to GitHub.
+
+No additional steps are required. Pushing the commit triggers the autograder.
+
+Tutorial:
+
+- Editing and committing files on GitHub  
+  <https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files>
+
+### Option B: GitHub Codespaces
+
+When working inside a GitHub Codespace, you must explicitly commit and push your changes.
+
+#### Using the terminal in Codespaces
+
+1. Save your edited files.
+2. Open the terminal inside the Codespace.
+3. Check the status of your files:
+
+   ```bash
+   git status
+   ```
+
+4. Stage your changes:
+
+   ```bash
+   git add <filename>
+   ```
+
+   or stage everything:
+
+   ```bash
+   git add .
+   ```
+
+5. Commit your changes:
+
+   ```bash
+   git commit -m "Describe your changes"
+   ```
+
+6. Push to GitHub:
+
+   ```bash
+   git push
+   ```
+
+#### Using the Source Control panel in Codespaces
+
+1. Click the **Source Control** icon on the left sidebar.
+2. Review the changed files.
+3. Stage the changes.
+4. Enter a commit message.
+5. Click **Commit**, then **Push**.
+
+Tutorials:
+
+- Using source control in Codespaces  
+  <https://docs.github.com/en/codespaces/developing-in-a-codespace/using-source-control-in-your-codespace>
+
+### Option C: VS Code on your computer (local)
+
+When working locally, commits and pushes move changes from your computer to GitHub.
+
+#### Using the command line
+
+1. Save your files.
+2. Open a terminal in the repository directory.
+3. Check status:
+
+   ```bash
+   git status
+   ```
+
+4. Stage files:
+
+   ```bash
+   git add <filename>
+   ```
+
+5. Commit:
+
+   ```bash
+   git commit -m "Describe your changes"
+   ```
+
+6. Push:
+
+   ```bash
+   git push
+   ```
+
+#### Using VS Code’s built-in Git interface
+
+1. Open the repository folder in VS Code.
+2. Click the **Source Control** icon.
+3. Review changed files.
+4. Stage the changes.
+5. Enter a commit message.
+6. Click **Commit**, then **Push** or **Sync Changes**.
+
+Tutorials:
+
+- Using Git with VS Code  
+  <https://code.visualstudio.com/docs/sourcecontrol/overview>
+- Git basics  
+  <https://docs.github.com/en/get-started/git-basics>
+
+You may commit and push as many times as you like before the deadline. The autograder runs on every push, and **only the
+final state of your repository before the deadline will be graded**.
