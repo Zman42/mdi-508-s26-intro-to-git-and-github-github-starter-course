@@ -1,0 +1,93 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: 'Task 3: Even or odd 2'
+      id: task-3-even-or-odd-2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Task 3: Even or odd 2'
+        setup-command: ''
+        command: python even_or_odd.py 4
+        input: ''
+        expected-output: even
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: 'Task 2: Greeting with a name'
+      id: task-2-greeting-with-a-name
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Task 2: Greeting with a name'
+        setup-command: ''
+        command: greeting.py Alice
+        input: ''
+        expected-output: Hello, Alice!
+        comparison-method: exact
+        timeout: 10
+    - name: 'Task 3: Even or odd'
+      id: task-3-even-or-odd
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Task 3: Even or odd'
+        setup-command: ''
+        command: python even_or_odd.py 9
+        input: ''
+        expected-output: odd
+        comparison-method: exact
+        timeout: 10
+        max-score: 1
+    - name: 'Task 3: Even or odd 2'
+      id: task-3-even-or-odd-2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Task 3: Even or odd 2'
+        setup-command: ''
+        command: python even_or_odd.py 4
+        input: ''
+        expected-output: even
+        comparison-method: exact
+        timeout: 10
+    - name: 'Task 4: Sum a list'
+      id: task-4-sum-a-list
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Task 4: Sum a list'
+        setup-command: cat 1,2,3,4 > prob4-data-test-260205.csv
+        command: python sum_csv prob4-data-test-260205
+        input: ''
+        expected-output: '10'
+        comparison-method: exact
+        timeout: 10
+    - name: 'Task 5: CSV shape'
+      id: task-5-csv-shape
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: 'Task 5: CSV shape'
+        setup-command: bash -lc 'printf "1,2,3\n4,5,6\n7,8,9\n10,11,12\n" >prob5-data-test-260205.csv'
+        command: python csv_shape.py prob-5-data-test-260205.csv
+        input: ''
+        expected-output: 4 3
+        comparison-method: exact
+        timeout: 10
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        TASK-3-EVEN-OR-ODD-2_RESULTS: "${{steps.task-3-even-or-odd-2.outputs.result}}"
+        TASK-2-GREETING-WITH-A-NAME_RESULTS: "${{steps.task-2-greeting-with-a-name.outputs.result}}"
+        TASK-3-EVEN-OR-ODD_RESULTS: "${{steps.task-3-even-or-odd.outputs.result}}"
+        TASK-4-SUM-A-LIST_RESULTS: "${{steps.task-4-sum-a-list.outputs.result}}"
+        TASK-5-CSV-SHAPE_RESULTS: "${{steps.task-5-csv-shape.outputs.result}}"
+      with:
+        runners: task-3-even-or-odd-2,task-2-greeting-with-a-name,task-3-even-or-odd,task-3-even-or-odd-2,task-4-sum-a-list,task-5-csv-shape
