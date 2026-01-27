@@ -31,7 +31,7 @@ jobs:
       with:
         test-name: 'Task 2: Greeting with a name (debug)'
         setup-command: ''
-        command: greeting.py Alice
+        command: python greeting.py Alice
         input: ''
         expected-output: Hello, Alice!
         comparison-method: exact
