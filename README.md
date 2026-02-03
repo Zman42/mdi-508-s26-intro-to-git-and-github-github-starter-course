@@ -1,6 +1,6 @@
 # MDI-508-S26 Homework 0: Introduction to Git, GitHub, and GitHub Classroom
 
-**Due: February 5, 2026. 11:59 pm**
+**Due: ~~February 5, 2026. 11:59 pm~~ February 10th, 2026. 11:59 pm**
 
 This assignment is designed to introduce you to the basic workflow for using Git, GitHub, and Github Classroom, which we
 will use throughout the course for submitting homework assignments.  By the end of this homework, you will have:
